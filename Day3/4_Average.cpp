@@ -1,13 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
-int Average(vector<int>&arr){
+float Average(vector<int>&arr){ //return type float
     int n = arr.size();
     float avg = 0.0;
     int sum = 0;
     for(int i = 0;i<n;i++){
         sum += arr[i];
     }
-    return sum/n;
+    return (float)sum/n; //ans should be float
 
 }
 int main(){
@@ -23,7 +23,7 @@ int main(){
         int num = stoi(temp);
         arr.push_back(num);
     }
-    int avg = Average(arr);
+    float avg = Average(arr);
     cout<<avg;
 }
 
